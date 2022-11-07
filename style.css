@@ -1,0 +1,355 @@
+/* *@font-face {
+  font-family: 'Tiberias';
+  src: url(Tiberias.otf);
+} */
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600&family=Merienda:wght@400;700&display=swap') !important;
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Dancing+Script:wght@700&family=Kaushan+Script&family=Merienda:wght@400;700&family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+*{
+  border: none;
+  padding: 0; margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  transition: .3s;
+  outline: none;
+  color: var(--temptress)
+}
+:root{
+  /* Cores */
+  --temptress: #362828; /*1*/
+  --dark-lava: #4b3c37; /*2*/
+  --bizancio: #782865; /*3*/
+  --fandango: #b53486; /*4*/
+  --carmesim: #ec6f8d; /*5*/
+  --bronze: #b78848; /*6*/
+  --tumbleweed: #eaac93; /*7*/
+  --branco-holandes: #edd4c0; /*8*/
+
+  --bg: #782865;
+  --bg-2: #eaac93;
+
+  /* Fonts */
+  --titulo: 'Berkshire Swash', cursive; /* 'Merienda', cursive; */
+  --texto: 'Merienda', cursive;
+  --dance: 'Dancing Script', cursive;
+  --kaushan: 'Kaushan Script', cursive;
+  --quinte: 'Quintessential', cursive;
+}
+.container{
+  max-width: 960px;
+  width: 100%;
+  margin: auto;
+}
+.btn{
+  font-family: var(--texto);
+  text-transform: uppercase;
+  font-weight: bolder;
+  background: var(--fandango);
+  padding: 0.5rem 1rem;
+  color: var(--branco-holandes);
+  border-radius: 5px;
+}
+.btn:hover, .btn-2:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 2px var(--dark-lava)
+}
+.btn-2{
+  font-family: var(--texto);
+  text-transform: uppercase;
+  font-weight: bolder;
+  background: var(--branco-holandes);
+  padding: 0.5rem 1rem;
+  color: var(--bronze);
+  border-radius: 5px;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--titulo)
+}
+p,span,a{
+  font-family: var(--texto)
+}
+section{
+  min-height: 100vh
+}
+img{
+  max-width: 300px
+}
+/* Barra de Navegação */
+
+header{
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 100;
+  background: var(--carmesim)
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 20px 0; */
+}
+.logo{
+  width: 10rem
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+.nav-link{
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 0.2rem;
+  color: var(--branco-holandes);
+  text-transform: uppercase;
+  letter-spacing: 2px
+}
+.nav-link:hover{
+  color: var(--temptress);
+  background: /*adicionar cor*/
+}
+.menu-icon{
+  display: none; /*mudar para flex apenas para ver e mudar a cor*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-row-gap: 5px;
+  cursor: pointer;
+  z-index: 200
+}
+.menu-icon div{
+  display: block;
+  background: var(--branco-holandes);
+  width: 24px; height: 2px
+}
+.move .line1{
+  transform: rotate(-45deg) translate(-5px,5px);
+}
+.move .line2{
+  opacity: 0;
+}
+.move .line3{
+  transform: rotate(45deg) translate(-5px,-5px);
+}
+.header-active{
+  /* background: transparent; */
+  transition: .3s
+}
+
+/* Início */
+#home{
+  background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)), url("https://i.imgur.com/Fvv1s20.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home-content{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+}
+.home-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 13rem;
+  justify-content: space-between;
+}
+.home-text h1{
+  font-size: 4rem;
+  color: var(--carmesim)
+}
+.home-text span{
+  color: var(--bronze);
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: flex;
+}
+.home-text span::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  left: -40px;
+  display: block;
+  background: var(--bronze);
+  width: 4rem; height: 3px;
+  border-radius: 5px
+}
+.home-text span::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  right: -103px;
+  display: block;
+  background: var(--bronze);
+  width: 4rem; height: 3px;
+  border-radius: 5px
+}
+
+/* Sobre */
+#about{
+  background: var(--tumbleweed)
+}
+.about-content{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  min-height: 95vh;
+  align-items: center;
+  padding: 1rem
+}
+.about-content img{
+  width: 100%;
+  border-radius: 50% 50% 0 50%;
+  padding: 8px;
+  background: linear-gradient(45deg, var(--fandango), transparent, var(--branco-holandes));
+  max-width: 360px
+}
+.about-content span{
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+.about-content p{
+  margin: 10px 0
+}
+
+/* Produtos */
+#product{
+  background: var(--fandango);
+}
+.product-content{
+  min-height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem
+}
+.product-content .card{
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  width: 18rem; height: 29rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px
+}
+.product-content .card img{
+  width: 100%;
+  border-radius: 10px
+}
+.card-info *{
+  color: var(--branco-holandes);
+  text-align: center;
+}
+.card-info h3{
+  font-size: 2rem;
+  font-family: var(--titulo);
+  letter-spacing: 2px;
+}
+.card-info p{
+  font-size: 1rem;
+  font-family: var(--texto);
+}
+
+/* Contato */
+#contact{
+  background: var(--temptress);
+  min-height: 90vh
+}
+.contact-content{
+  min-height: 90vh;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap-reverse;
+  padding: 2rem;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly
+}
+.contact-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.contact-text i{
+  color: var(--branco-holandes)
+}
+.whatsapp{
+  background: #4ac75b
+}
+.email{
+  background: #5aace1
+}
+.facebook{
+  background: #3d5b9a
+}
+.instagram{
+  background: linear-gradient(45deg, #9b02d8, #e90053, #f6a80a)
+}
+footer a{
+  color: var(--branco-holandes);
+  font-size: 10px
+}
+footer{
+  text-align: center;
+  background: var(--dark-lava);
+  padding: 5px;
+}
+@media (max-width: 866px){
+  .about-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 775px){
+  .menu-icon{
+    display: flex;
+    padding: 10px
+  }
+  .navbar{
+    position: absolute;
+    top: 0; right: -200%;
+    width: 300px;
+    height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .open-menu{
+    right: 0;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .nav-link{
+    display: block;
+    margin: 1rem 0;
+  }
+  .nav-link:hover{
+    background: var(--branco-holandes)
+  }
+  .home-text h1{
+    font-size: 50px
+  }
+}
+@media (max-width: 630px){
+  p, .card-info p, .btn, .btn-2{
+    font-size: 12px
+  }
+}
