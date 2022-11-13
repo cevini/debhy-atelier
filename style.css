@@ -228,41 +228,91 @@ header{
 }
 .product-content{
   min-height: 95vh;
+  padding: 1rem;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem
+  gap: 10px
 }
-.product-content .card{
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-  width: 18rem; height: 29rem;
+.product-box{
+  width: 22rem;
+  height: 35rem;
+  background: #1e1e26;
+  border-radius: 10px;
+  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+.product-box:hover .product-layer{
+  top: 0;
+}
+.product-box:hover .product-box img{
+  transform: scale(1.1);
+}
+.product-layer{
+  top: -100%;
+  position: absolute;
+  padding: 1rem;
+  height: 29.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border-radius: 10px
+  background: rgba(0, 0, 0, 0.5);
 }
-.product-content .card img{
-  width: 100%;
-  border-radius: 10px
+.product-layer p{
+  color: var(--branco-holandes)
 }
-.card-info *{
+.product-box img{
+  max-width: 100%;
+  width: 22rem;
+  height: 84%;
+  object-fit: cover;
+  object-position: center;
+}
+.product-info{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+.product-info *{
   color: var(--branco-holandes);
-  text-align: center;
 }
-.card-info h3{
-  font-size: 2rem;
-  font-family: var(--titulo);
-  letter-spacing: 2px;
+.product-title span{
+  display: flex;
+  align-items: center;
 }
-.card-info p{
-  font-size: 1rem;
-  font-family: var(--texto);
+.product-title span div{
+  width: 1rem; height: 1rem;
+  border-radius: 50%;
+  margin: 0 5px
 }
+.product-price{
+  font-family: var(--dance);
+  font-size: 1.5rem
+}
+.swiper-slide{
+  width: auto;
+}
+.swiper-pagination{
+  bottom: -3px !important;
+}
+.card-orange{
+  background: orange
+}
+.card-blue{
+  background: blue
+}
+.card-pink{
+  background: pink
+}
+.card-green{
+  background: green
+}
+
 
 /* Contato */
 #contact{
@@ -352,4 +402,7 @@ footer{
   p, .card-info p, .btn, .btn-2{
     font-size: 12px
   }
+}
+@media (max-width: 450px){
+
 }
