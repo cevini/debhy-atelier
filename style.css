@@ -196,7 +196,7 @@ header{
 
 /* Sobre */
 #about{
-  background: var(--tumbleweed)
+  background: linear-gradient(130deg, #ffeee6,var(--tumbleweed))
 }
 .about-content{
   display: grid;
@@ -224,7 +224,8 @@ header{
 
 /* Produtos */
 #product{
-  background: var(--fandango);
+  background: linear-gradient(312deg, #631d49,var(--fandango));
+  box-shadow: 0 0 10px black
 }
 .product-content{
   min-height: 95vh;
