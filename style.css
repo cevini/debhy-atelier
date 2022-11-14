@@ -297,7 +297,8 @@ header{
 .swiper-wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  border-radius: 10px
 }
 .swiper-slide{
   width: 22rem;
