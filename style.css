@@ -300,8 +300,10 @@ header{
   justify-content: space-between
 }
 .swiper-slide{
-  width: 352px;
-  border-radius: 10px
+  width: 22rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center
 }
 .swiper-pagination{
   bottom: -3px !important;
