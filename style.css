@@ -294,6 +294,11 @@ header{
   font-family: var(--dance);
   font-size: 1.5rem
 }
+.swiper-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
 .swiper-slide{
   width: 352px;
   border-radius: 10px
